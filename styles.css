@@ -1,0 +1,147 @@
+:root {
+    --text-color: #000000;
+    --bg-color: transparent;
+    --font-family: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.pomodoro-widget {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.session-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.tomato-icon {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.session-type {
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    padding: 5px 10px;
+    border-radius: 20px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.indicator.active {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-text {
+    font-size: 1rem;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.timer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.timer {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 0%;
+    transition: width 1s linear;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.control-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* Font options */
+.font-1 { font-family: 'Arial', sans-serif; }
+.font-2 { font-family: 'Helvetica', sans-serif; }
+.font-3 { font-family: 'Times New Roman', serif; }
+.font-4 { font-family: 'Courier New', monospace; }
+.font-5 { font-family: 'Georgia', serif; }
+.font-6 { font-family: 'Verdana', sans-serif; }
+.font-7 { font-family: 'Tahoma', sans-serif; }
+.font-8 { font-family: 'Trebuchet MS', sans-serif; }
+.font-9 { font-family: 'Impact', sans-serif; }
