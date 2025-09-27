@@ -130,7 +130,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function resetTimer() {
         pauseTimer();
+        // Reset pomodoro count to 0
+        state.completedPomodoros = 0;
+        // Reset to focus mode
+        state.currentMode = 'focus';
         setTimerForCurrentMode();
+        updateModeIndicators();
+        updatePomodoroCount();
         updateTimer();
     }
 

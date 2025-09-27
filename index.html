@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="pomodoro-widget">
-             <div class="header">
+            <div class="left-section">
                 <div class="session-info">
                     <div class="tomato-icon"># <span id="pomodoro-count">01</span></div>
                     <div class="session-type">
@@ -24,29 +24,35 @@
                         </div>
                     </div>
                 </div>
-                <div id="custom-text" class="custom-text">Welcome to my Task</div>
             </div>
             
-            <div class="timer-section">
+            <div id="custom-text" class="custom-text">Welcome to my Task abc</div>
+            
+            <div class="center-section">
                 <div id="timer" class="timer">12:34</div>
                 <div class="progress-container">
                     <div id="progress-bar" class="progress-bar"></div>
                 </div>
             </div>
             
-            <div class="controls">
-                <button id="play-pause" class="control-btn" aria-label="Play or Pause timer">
-                    <img id="play-pause-icon" src="icons/play.svg" alt="Play" class="icon">
-                </button>
-                <button id="next" class="control-btn" aria-label="Skip to next session">
-                    <img src="icons/next.svg" alt="Next" class="icon">
-                </button>
-                <button id="reset" class="control-btn" aria-label="Reset timer">
-                    <img src="icons/reset.svg" alt="Reset" class="icon">
-                </button>
-                <button id="sound-toggle" class="control-btn" aria-label="Toggle sound">
-                    <img id="sound-icon" src="icons/bell.svg" alt="Sound On" class="icon">
-                </button>
+            <div class="right-section">
+                <div class="controls-row">
+                    <button id="play-pause" class="control-btn" aria-label="Play or Pause timer">
+                        <img id="play-pause-icon" src="icons/play.svg" alt="Play" class="icon">
+                    </button>
+                    <button id="next" class="control-btn" aria-label="Skip to next session">
+                        <img src="icons/next.svg" alt="Next" class="icon">
+                    </button>
+                    <button id="reset" class="control-btn" aria-label="Reset timer">
+                        <img src="icons/reset.svg" alt="Reset" class="icon">
+                    </button>
+                    <button id="sound-toggle" class="control-btn" aria-label="Toggle sound">
+                        <img id="sound-icon" src="icons/bell.svg" alt="Sound On" class="icon">
+                    </button>
+                </div>
+                <div class="controls-row">
+                    
+                </div>
             </div>
         </div>
     </div>
