@@ -138,6 +138,11 @@ document.addEventListener('DOMContentLoaded', () => {
         updateModeIndicators();
         updatePomodoroCount();
         updateTimer();
+        
+        // Auto-start if enabled
+        if (settings.autoStart === 1) {
+            startTimer();
+        }
     }
 
     function nextSession() {
@@ -243,4 +248,9 @@ document.addEventListener('DOMContentLoaded', () => {
     applyVisualSettings();
     setTimerForCurrentMode();
     updateTimer();
+    
+    // Auto-start timer if enabled
+    if (settings.autoStart === 1 && !state.isRunning) {
+        startTimer();
+    }
 });

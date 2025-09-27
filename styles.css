@@ -25,11 +25,13 @@ body {
 
 .container {
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
+    margin: 1px;
 }
 
 .pomodoro-widget {
-    width: 100%;
+    width: 100%; /* Changed from 98% to 100% to fill its container */
+    max-width: 700px; /* Added max-width to constrain the widget */
     padding: 10px;
     border-radius: 20px;
     background: linear-gradient(135deg, #c7f5e6 0%, #a8e6f7 100%);
@@ -37,9 +39,12 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid #000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-overlay);
+    transition: var(--transition-smooth);
+    border: 1px solid hsl(var(--control-border));
+    align-items: center;
 }
 
 /* Left section */
@@ -55,6 +60,7 @@ body {
     border-radius: 15px;
     padding: 5px;
     margin-bottom: 10px;
+    height: 70px;
 }
 
 .tomato-icon {
@@ -131,7 +137,7 @@ body {
 
 /* Right section */
 .right-section {
-    width: 20%;
+    width: 28%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -154,6 +160,18 @@ body {
     align-items: center;
     border-radius: 50%;
     transition: background-color 0.3s;
+    padding: 0; /* Ensure no padding */
+    min-width: 35px; /* Prevent flex shrinking */
+    min-height: 35px; /* Prevent flex shrinking */
+    overflow: hidden; /* Clip any overflowing content */
+}
+
+/* Ensure the icon doesn't affect the button shape */
+.icon {
+    width: 20px;
+    height: 20px;
+    display: block; /* Remove any inline spacing */
+    margin: 0; /* Remove any default margins */
 }
 
 .control-btn:hover {
